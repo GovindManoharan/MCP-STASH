@@ -1,0 +1,345 @@
+{
+  "user_id": "U123456789",
+  "claims": [
+    {
+      "claim_id": "CLM20250605001",
+      "submitted_on": "2025-06-01T10:00:00Z",
+      "status": "PAID",
+      "drug": {
+        "name": "Adalimumab",
+        "ndc": "00074-4333-02",
+        "strength": "40mg/0.8mL",
+        "form": "Injection",
+        "days_supply": 30,
+        "quantity_dispensed": 2,
+        "fill_number": 1,
+        "generic_indicator": "B"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1987654",
+        "name": "CVS Pharmacy",
+        "location": {
+          "city": "Boston",
+          "state": "MA",
+          "zip": "02115"
+        },
+        "phone": "800-111-2222"
+      },
+      "prescriber": {
+        "npi": "1234567890",
+        "name": "Dr. Jane Doe",
+        "specialty": "Rheumatology"
+      },
+      "pricing": {
+        "ingredient_cost": 3750.00,
+        "dispensing_fee": 2.50,
+        "total_cost": 3752.50,
+        "copay": 25.00,
+        "plan_paid": 3727.50,
+        "rebate_amount": 500.00
+      },
+      "adjudication": {
+        "processed_on": "2025-06-01T10:05:00Z",
+        "processor_id": "CVS-PROCESSOR-01",
+        "response_code": "00",
+        "reject_reason": null
+      },
+      "claim_type": "SPECIALTY",
+      "plan_details": {
+        "plan_id": "PBM123-PlanA",
+        "tier": 3,
+        "formulary_status": "Non-Preferred",
+        "utilization_management": {
+          "pa_required": true,
+          "step_therapy": false,
+          "quantity_limit": true
+        }
+      },
+      "related_pa_id": "PA20250605001",
+      "audit_trail": [
+        {
+          "timestamp": "2025-06-01T10:00:00Z",
+          "actor": "pharmacy_system",
+          "action": "CLAIM_SUBMITTED"
+        },
+        {
+          "timestamp": "2025-06-01T10:05:00Z",
+          "actor": "claims_engine",
+          "action": "CLAIM_ADJUDICATED"
+        }
+      ]
+    },
+    {
+      "claim_id": "CLM20250522002",
+      "submitted_on": "2025-05-22T15:00:00Z",
+      "status": "PAID",
+      "drug": {
+        "name": "Insulin Glargine",
+        "ndc": "00088-2220-33",
+        "strength": "100 units/mL",
+        "form": "Injection",
+        "days_supply": 30,
+        "quantity_dispensed": 1,
+        "fill_number": 1,
+        "generic_indicator": "B"
+      },
+      "pharmacy": {
+        "ncpdp_id": "2001123",
+        "name": "Walgreens",
+        "location": {
+          "city": "Miami",
+          "state": "FL",
+          "zip": "33101"
+        },
+        "phone": "800-333-4444"
+      },
+      "prescriber": {
+        "npi": "9876543210",
+        "name": "Dr. Alan Smith",
+        "specialty": "Endocrinology"
+      },
+      "pricing": {
+        "ingredient_cost": 300.00,
+        "dispensing_fee": 1.50,
+        "total_cost": 301.50,
+        "copay": 10.00,
+        "plan_paid": 291.50,
+        "rebate_amount": 40.00
+      },
+      "adjudication": {
+        "processed_on": "2025-05-22T15:05:00Z",
+        "processor_id": "WAG-ENGINE-01",
+        "response_code": "00",
+        "reject_reason": null
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "PBM123-PlanA",
+        "tier": 2,
+        "formulary_status": "Preferred",
+        "utilization_management": {
+          "pa_required": true,
+          "step_therapy": false,
+          "quantity_limit": false
+        }
+      },
+      "related_pa_id": "PA20250522007",
+      "audit_trail": [
+        {
+          "timestamp": "2025-05-22T15:00:00Z",
+          "actor": "pharmacy_system",
+          "action": "CLAIM_SUBMITTED"
+        },
+        {
+          "timestamp": "2025-05-22T15:05:00Z",
+          "actor": "claims_engine",
+          "action": "CLAIM_ADJUDICATED"
+        }
+      ]
+    },
+    {
+      "claim_id": "CLM20250410003",
+      "submitted_on": "2025-04-10T11:15:00Z",
+      "status": "DENIED",
+      "drug": {
+        "name": "Ozempic",
+        "ndc": "0169-4096-13",
+        "strength": "0.25mg/dose",
+        "form": "Injection",
+        "days_supply": 30,
+        "quantity_dispensed": 1,
+        "fill_number": 1,
+        "generic_indicator": "B"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1009981",
+        "name": "Walmart Pharmacy",
+        "location": {
+          "city": "Orlando",
+          "state": "FL",
+          "zip": "32801"
+        },
+        "phone": "888-444-5555"
+      },
+      "prescriber": {
+        "npi": "5554433221",
+        "name": "Dr. Laura Kim",
+        "specialty": "Internal Medicine"
+      },
+      "pricing": {
+        "ingredient_cost": 890.00,
+        "dispensing_fee": 2.00,
+        "total_cost": 892.00,
+        "copay": 0.00,
+        "plan_paid": 0.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-04-10T11:17:00Z",
+        "processor_id": "WAL-PROCESSOR-03",
+        "response_code": "70",
+        "reject_reason": "PA Required"
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "PBM123-PlanA",
+        "tier": 3,
+        "formulary_status": "Non-Preferred",
+        "utilization_management": {
+          "pa_required": true,
+          "step_therapy": true,
+          "quantity_limit": true
+        }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        {
+          "timestamp": "2025-04-10T11:15:00Z",
+          "actor": "pharmacy_system",
+          "action": "CLAIM_SUBMITTED"
+        },
+        {
+          "timestamp": "2025-04-10T11:17:00Z",
+          "actor": "claims_engine",
+          "action": "CLAIM_DENIED"
+        }
+      ]
+    },
+    {
+      "claim_id": "CLM20250301004",
+      "submitted_on": "2025-03-01T09:00:00Z",
+      "status": "PAID",
+      "drug": {
+        "name": "Lisinopril",
+        "ndc": "00245-0481-30",
+        "strength": "10mg",
+        "form": "Tablet",
+        "days_supply": 90,
+        "quantity_dispensed": 90,
+        "fill_number": 1,
+        "generic_indicator": "G"
+      },
+      "pharmacy": {
+        "ncpdp_id": "5674321",
+        "name": "Publix Pharmacy",
+        "location": {
+          "city": "Tampa",
+          "state": "FL",
+          "zip": "33601"
+        },
+        "phone": "877-555-1212"
+      },
+      "prescriber": {
+        "npi": "2223334445",
+        "name": "Dr. Marvin Jacobs",
+        "specialty": "Cardiology"
+      },
+      "pricing": {
+        "ingredient_cost": 8.00,
+        "dispensing_fee": 1.00,
+        "total_cost": 9.00,
+        "copay": 0.00,
+        "plan_paid": 9.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-03-01T09:03:00Z",
+        "processor_id": "PUBLIX-ENG-02",
+        "response_code": "00",
+        "reject_reason": null
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "PBM123-PlanA",
+        "tier": 1,
+        "formulary_status": "Preferred",
+        "utilization_management": {
+          "pa_required": false,
+          "step_therapy": false,
+          "quantity_limit": false
+        }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        {
+          "timestamp": "2025-03-01T09:00:00Z",
+          "actor": "pharmacy_system",
+          "action": "CLAIM_SUBMITTED"
+        },
+        {
+          "timestamp": "2025-03-01T09:03:00Z",
+          "actor": "claims_engine",
+          "action": "CLAIM_ADJUDICATED"
+        }
+      ]
+    },
+    {
+      "claim_id": "CLM20250215005",
+      "submitted_on": "2025-02-15T12:30:00Z",
+      "status": "REJECTED",
+      "drug": {
+        "name": "Atorvastatin",
+        "ndc": "00093-1490-01",
+        "strength": "20mg",
+        "form": "Tablet",
+        "days_supply": 30,
+        "quantity_dispensed": 30,
+        "fill_number": 1,
+        "generic_indicator": "G"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1122334",
+        "name": "Rite Aid",
+        "location": {
+          "city": "Jacksonville",
+          "state": "FL",
+          "zip": "32202"
+        },
+        "phone": "866-999-0000"
+      },
+      "prescriber": {
+        "npi": "6667778888",
+        "name": "Dr. Nina Patel",
+        "specialty": "Family Medicine"
+      },
+      "pricing": {
+        "ingredient_cost": 12.00,
+        "dispensing_fee": 1.25,
+        "total_cost": 13.25,
+        "copay": 5.00,
+        "plan_paid": 0.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-02-15T12:32:00Z",
+        "processor_id": "RA-ENGINE-05",
+        "response_code": "75",
+        "reject_reason": "Card not active"
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "PBM123-PlanA",
+        "tier": 1,
+        "formulary_status": "Preferred",
+        "utilization_management": {
+          "pa_required": false,
+          "step_therapy": false,
+          "quantity_limit": false
+        }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        {
+          "timestamp": "2025-02-15T12:30:00Z",
+          "actor": "pharmacy_system",
+          "action": "CLAIM_SUBMITTED"
+        },
+        {
+          "timestamp": "2025-02-15T12:32:00Z",
+          "actor": "claims_engine",
+          "action": "CLAIM_REJECTED"
+        }
+      ]
+    }
+  ]
+}

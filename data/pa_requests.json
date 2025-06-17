@@ -1,0 +1,167 @@
+{
+  "user_id": "U123456789",
+  "pa_requests": [
+    {
+      "pa_id": "PA20250605001",
+      "requested_on": "2025-06-01T09:30:00Z",
+      "status": "PENDING",
+      "drug": {
+        "name": "Adalimumab",
+        "strength": "40mg/0.8mL",
+        "form": "Injection",
+        "quantity_requested": 2,
+        "days_supply": 30,
+        "ndc": "00074-4333-02"
+      },
+      "prescriber": {
+        "npi": "1234567890",
+        "name": "Dr. Jane Doe",
+        "specialty": "Rheumatology",
+        "contact": {
+          "phone": "555-123-4567",
+          "fax": "555-123-4568",
+          "email": "jane.doe@medcare.org"
+        },
+        "address": {
+          "line1": "101 Wellness Blvd",
+          "line2": "Suite 300",
+          "city": "Boston",
+          "state": "MA",
+          "zip": "02115"
+        }
+      },
+      "pharmacy": {
+        "ncpdp_id": "1987654",
+        "name": "CVS Pharmacy",
+        "phone": "800-111-2222",
+        "fax": "800-111-2223"
+      },
+      "clinical_info": {
+        "diagnosis_codes": ["M06.9"],
+        "clinical_rationale": "RA diagnosis confirmed. Methotrexate failed. Biologic required.",
+        "labs": [
+          {
+            "test": "CRP",
+            "value": "8.6",
+            "unit": "mg/L",
+            "date": "2025-05-20"
+          }
+        ],
+        "previous_medications": [
+          {
+            "name": "Methotrexate",
+            "start_date": "2024-11-01",
+            "end_date": "2025-04-01",
+            "outcome": "Ineffective"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "type": "Clinical Summary",
+          "uploaded_by": "prescriber",
+          "uploaded_on": "2025-06-01T09:35:00Z",
+          "url": "https://s3.example.com/docs/PA20250605001_summary.pdf"
+        }
+      ],
+      "decision": {
+        "made_on": null,
+        "by": null,
+        "reason": null
+      },
+      "audit_trail": [
+        {
+          "timestamp": "2025-06-01T09:30:00Z",
+          "actor": "system",
+          "action": "PA_REQUEST_RECEIVED"
+        },
+        {
+          "timestamp": "2025-06-01T09:35:00Z",
+          "actor": "prescriber_portal",
+          "action": "DOCUMENTS_UPLOADED"
+        }
+      ]
+    },
+    {
+      "pa_id": "PA20250522007",
+      "requested_on": "2025-05-22T14:10:00Z",
+      "status": "APPROVED",
+      "drug": {
+        "name": "Insulin Glargine",
+        "strength": "100 units/mL",
+        "form": "Injection",
+        "quantity_requested": 1,
+        "days_supply": 30,
+        "ndc": "00088-2220-33"
+      },
+      "prescriber": {
+        "npi": "9876543210",
+        "name": "Dr. Alan Smith",
+        "specialty": "Endocrinology",
+        "contact": {
+          "phone": "555-987-6543",
+          "fax": "555-987-6544",
+          "email": "asmith@endoclinic.org"
+        },
+        "address": {
+          "line1": "22 Diabetes Center Drive",
+          "line2": "",
+          "city": "Miami",
+          "state": "FL",
+          "zip": "33101"
+        }
+      },
+      "pharmacy": {
+        "ncpdp_id": "2001123",
+        "name": "Walgreens",
+        "phone": "800-333-4444",
+        "fax": "800-333-4445"
+      },
+      "clinical_info": {
+        "diagnosis_codes": ["E11.9"],
+        "clinical_rationale": "Patient has uncontrolled Type 2 Diabetes; basal insulin initiation necessary.",
+        "labs": [
+          {
+            "test": "HbA1c",
+            "value": "9.2",
+            "unit": "%",
+            "date": "2025-05-15"
+          }
+        ],
+        "previous_medications": [
+          {
+            "name": "Metformin",
+            "start_date": "2023-01-01",
+            "end_date": "2025-05-01",
+            "outcome": "Partially effective"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "type": "Lab Report",
+          "uploaded_by": "prescriber",
+          "uploaded_on": "2025-05-22T14:12:00Z",
+          "url": "https://s3.example.com/docs/PA20250522007_labreport.pdf"
+        }
+      ],
+      "decision": {
+        "made_on": "2025-05-24T11:00:00Z",
+        "by": "clinical_pharmacist_01",
+        "reason": "Met criteria for basal insulin initiation"
+      },
+      "audit_trail": [
+        {
+          "timestamp": "2025-05-22T14:10:00Z",
+          "actor": "system",
+          "action": "PA_REQUEST_RECEIVED"
+        },
+        {
+          "timestamp": "2025-05-24T11:00:00Z",
+          "actor": "clinical_pharmacist_01",
+          "action": "PA_APPROVED"
+        }
+      ]
+    }
+  ]
+}

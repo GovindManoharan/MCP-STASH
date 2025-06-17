@@ -1,0 +1,85 @@
+# Environment variables
+# Ignore all .env files, but you can commit an example template if you have one
+.env
+*.env
+.env.*
+!/.env.example
+
+# Local data & generated files
+# This directory seems to store a generated vector database
+/opm_source_code_vectordb/
+
+# Consider if './knowledgeBase/' should be ignored.
+# If it contains large, generated, or downloaded files not meant for version control, add:
+# /knowledgeBase/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib60/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# IDE / Editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+logs/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints

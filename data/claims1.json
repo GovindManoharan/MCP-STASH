@@ -1,0 +1,438 @@
+{
+  "user_id": "U234567890",
+  "claims": [
+    {
+      "claim_id": "CLM20250715061",
+      "submitted_on": "2025-07-15T09:30:00Z",
+      "status": "PAID",
+      "drug": {
+        "name": "Simvastatin",
+        "ndc": "00904-5896-61",
+        "strength": "40mg",
+        "form": "Tablet",
+        "days_supply": 90,
+        "quantity_dispensed": 90,
+        "fill_number": 4,
+        "generic_indicator": "G"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1122334",
+        "name": "Rite Aid",
+        "location": {
+          "city": "Chicago",
+          "state": "IL",
+          "zip": "60611"
+        },
+        "phone": "866-999-0000"
+      },
+      "prescriber": {
+        "npi": "5566778899",
+        "name": "Dr. Michael Brown",
+        "specialty": "Cardiology"
+      },
+      "pricing": {
+        "ingredient_cost": 14.50,
+        "dispensing_fee": 1.75,
+        "total_cost": 16.25,
+        "copay": 5.00,
+        "plan_paid": 11.25,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-07-15T09:32:00Z",
+        "processor_id": "RA-ENGINE-03",
+        "response_code": "00",
+        "reject_reason": null
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "CIGNA-PPO-MID",
+        "tier": 1,
+        "formulary_status": "Preferred",
+        "utilization_management": { "pa_required": false, "step_therapy": false, "quantity_limit": false }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        { "timestamp": "2025-07-15T09:30:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-07-15T09:32:00Z", "actor": "claims_engine", "action": "CLAIM_ADJUDICATED" }
+      ]
+    },
+    {
+      "claim_id": "CLM20250720062",
+      "submitted_on": "2025-07-20T14:00:00Z",
+      "status": "DENIED",
+      "drug": {
+        "name": "Keytruda",
+        "ndc": "00006-3026-02",
+        "strength": "100mg/4mL",
+        "form": "Injection",
+        "days_supply": 21,
+        "quantity_dispensed": 1,
+        "fill_number": 1,
+        "generic_indicator": "B"
+      },
+      "pharmacy": {
+        "ncpdp_id": "9876543",
+        "name": "Northwestern Memorial Hospital Pharmacy",
+        "location": { "city": "Chicago", "state": "IL", "zip": "60611" }
+      },
+      "prescriber": {
+        "npi": "6677889900",
+        "name": "Dr. Emily White",
+        "specialty": "Oncology"
+      },
+      "pricing": {
+        "ingredient_cost": 5500.00,
+        "dispensing_fee": 50.00,
+        "total_cost": 5550.00,
+        "copay": 0.00,
+        "plan_paid": 0.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-07-20T14:05:00Z",
+        "processor_id": "CIGNA-PROC-SP",
+        "response_code": "60",
+        "reject_reason": "Plan/Benefit Exclusion"
+      },
+      "claim_type": "MEDICAL",
+      "plan_details": {
+        "plan_id": "CIGNA-PPO-MID",
+        "tier": 5,
+        "formulary_status": "Excluded",
+        "utilization_management": { "pa_required": true, "step_therapy": true, "quantity_limit": true }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        { "timestamp": "2025-07-20T14:00:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-07-20T14:05:00Z", "actor": "claims_engine", "action": "CLAIM_DENIED" }
+      ]
+    }
+  ]
+}
+{
+  "user_id": "U345678901",
+  "claims": [
+    {
+      "claim_id": "CLM20250801071",
+      "submitted_on": "2025-08-01T11:45:00Z",
+      "status": "PAID",
+      "drug": {
+        "name": "Eliquis",
+        "ndc": "00003-0893-21",
+        "strength": "5mg",
+        "form": "Tablet",
+        "days_supply": 30,
+        "quantity_dispensed": 60,
+        "fill_number": 2,
+        "generic_indicator": "B"
+      },
+      "pharmacy": {
+        "ncpdp_id": "2001123",
+        "name": "Walgreens",
+        "location": { "city": "Phoenix", "state": "AZ", "zip": "85004" }
+      },
+      "prescriber": {
+        "npi": "7788990011",
+        "name": "Dr. David Johnson",
+        "specialty": "Family Medicine"
+      },
+      "pricing": {
+        "ingredient_cost": 560.00,
+        "dispensing_fee": 2.00,
+        "total_cost": 562.00,
+        "copay": 50.00,
+        "plan_paid": 512.00,
+        "rebate_amount": 65.00
+      },
+      "adjudication": {
+        "processed_on": "2025-08-01T11:46:15Z",
+        "processor_id": "WAG-ENGINE-AZ",
+        "response_code": "00",
+        "reject_reason": null
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "ANTHEM-AZ-GOLD",
+        "tier": 2,
+        "formulary_status": "Preferred",
+        "utilization_management": { "pa_required": true, "step_therapy": false, "quantity_limit": true }
+      },
+      "related_pa_id": "PA20250615019",
+      "audit_trail": [
+        { "timestamp": "2025-08-01T11:45:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-08-01T11:46:15Z", "actor": "claims_engine", "action": "CLAIM_ADJUDICATED" }
+      ]
+    },
+    {
+      "claim_id": "CLM20250810072",
+      "submitted_on": "2025-08-10T16:20:00Z",
+      "status": "REJECTED",
+      "drug": {
+        "name": "Ibuprofen",
+        "ndc": "49035-0138-12",
+        "strength": "800mg",
+        "form": "Tablet",
+        "days_supply": 7,
+        "quantity_dispensed": 21,
+        "fill_number": 1,
+        "generic_indicator": "G"
+      },
+      "pharmacy": {
+        "ncpdp_id": "2001123",
+        "name": "Walgreens",
+        "location": { "city": "Phoenix", "state": "AZ", "zip": "85004" }
+      },
+      "prescriber": {
+        "npi": "8899001122",
+        "name": "Dr. Sarah Connor",
+        "specialty": "Urgent Care"
+      },
+      "pricing": {
+        "ingredient_cost": 18.00,
+        "dispensing_fee": 2.00,
+        "total_cost": 20.00,
+        "copay": 10.00,
+        "plan_paid": 0.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-08-10T16:20:45Z",
+        "processor_id": "WAG-ENGINE-AZ",
+        "response_code": "88",
+        "reject_reason": "DUR Reject: Drug-Drug Interaction"
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "ANTHEM-AZ-GOLD",
+        "tier": 1,
+        "formulary_status": "Preferred",
+        "utilization_management": { "pa_required": false, "step_therapy": false, "quantity_limit": false }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        { "timestamp": "2025-08-10T16:20:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-08-10T16:20:45Z", "actor": "claims_engine", "action": "CLAIM_REJECTED" }
+      ]
+    }
+  ]
+}
+{
+  "user_id": "U456789012",
+  "claims": [
+    {
+      "claim_id": "CLM20250901081",
+      "submitted_on": "2025-09-01T10:00:00Z",
+      "status": "PAID",
+      "drug": {
+        "name": "Levothyroxine",
+        "ndc": "00378-0055-01",
+        "strength": "50mcg",
+        "form": "Tablet",
+        "days_supply": 90,
+        "quantity_dispensed": 90,
+        "fill_number": 8,
+        "generic_indicator": "G"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1230987",
+        "name": "Express Scripts Mail Order",
+        "location": { "city": "St. Louis", "state": "MO", "zip": "63121" }
+      },
+      "prescriber": {
+        "npi": "9900112233",
+        "name": "Dr. Aisha Khan",
+        "specialty": "Endocrinology"
+      },
+      "pricing": {
+        "ingredient_cost": 12.00,
+        "dispensing_fee": 0.00,
+        "total_cost": 12.00,
+        "copay": 0.00,
+        "plan_paid": 12.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-09-01T10:01:30Z",
+        "processor_id": "ESI-MAIL-PROC",
+        "response_code": "00",
+        "reject_reason": null
+      },
+      "claim_type": "MAIL",
+      "plan_details": {
+        "plan_id": "PBM-ESI-NATIONAL",
+        "tier": 1,
+        "formulary_status": "Preferred",
+        "utilization_management": { "pa_required": false, "step_therapy": false, "quantity_limit": false }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        { "timestamp": "2025-09-01T10:00:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-09-01T10:01:30Z", "actor": "claims_engine", "action": "CLAIM_ADJUDICATED" }
+      ]
+    }
+  ]
+}
+{
+  "user_id": "U567890123",
+  "claims": [
+    {
+      "claim_id": "CLM20250905091",
+      "submitted_on": "2025-09-05T15:10:00Z",
+      "status": "DENIED",
+      "drug": {
+        "name": "Wegovy",
+        "ndc": "0169-4240-11",
+        "strength": "2.4mg/0.75mL",
+        "form": "Injection",
+        "days_supply": 28,
+        "quantity_dispensed": 1,
+        "fill_number": 1,
+        "generic_indicator": "B"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1987654",
+        "name": "CVS Pharmacy",
+        "location": { "city": "Denver", "state": "CO", "zip": "80202" }
+      },
+      "prescriber": {
+        "npi": "1011223344",
+        "name": "Dr. Kenji Tanaka",
+        "specialty": "Bariatrics"
+      },
+      "pricing": {
+        "ingredient_cost": 1350.00,
+        "dispensing_fee": 4.50,
+        "total_cost": 1354.50,
+        "copay": 0.00,
+        "plan_paid": 0.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-09-05T15:11:05Z",
+        "processor_id": "CVS-PROCESSOR-01",
+        "response_code": "70",
+        "reject_reason": "PA Required"
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "KAISER-CO-SILVER",
+        "tier": 3,
+        "formulary_status": "Non-Preferred",
+        "utilization_management": { "pa_required": true, "step_therapy": false, "quantity_limit": true }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        { "timestamp": "2025-09-05T15:10:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-09-05T15:11:05Z", "actor": "claims_engine", "action": "CLAIM_DENIED" }
+      ]
+    },
+    {
+      "claim_id": "CLM20250905092",
+      "submitted_on": "2025-09-05T17:00:00Z",
+      "status": "PAID",
+      "drug": {
+        "name": "Amlodipine Besylate",
+        "ndc": "00378-0185-01",
+        "strength": "5mg",
+        "form": "Tablet",
+        "days_supply": 30,
+        "quantity_dispensed": 30,
+        "fill_number": 1,
+        "generic_indicator": "G"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1987654",
+        "name": "CVS Pharmacy",
+        "location": { "city": "Denver", "state": "CO", "zip": "80202" }
+      },
+      "prescriber": {
+        "npi": "2324252627",
+        "name": "Dr. Lisa Ray",
+        "specialty": "Internal Medicine"
+      },
+      "pricing": {
+        "ingredient_cost": 7.00,
+        "dispensing_fee": 1.00,
+        "total_cost": 8.00,
+        "copay": 0.00,
+        "plan_paid": 8.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-09-05T17:01:00Z",
+        "processor_id": "CVS-PROCESSOR-01",
+        "response_code": "00",
+        "reject_reason": null
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "KAISER-CO-SILVER",
+        "tier": 1,
+        "formulary_status": "Preferred",
+        "utilization_management": { "pa_required": false, "step_therapy": false, "quantity_limit": false }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        { "timestamp": "2025-09-05T17:00:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-09-05T17:01:00Z", "actor": "claims_engine", "action": "CLAIM_ADJUDICATED" }
+      ]
+    }
+  ]
+}
+{
+  "user_id": "U678901234",
+  "claims": [
+    {
+      "claim_id": "CLM20250201101",
+      "submitted_on": "2025-02-01T13:00:00Z",
+      "status": "REJECTED",
+      "drug": {
+        "name": "Sertraline HCl",
+        "ndc": "00093-7186-56",
+        "strength": "50mg",
+        "form": "Tablet",
+        "days_supply": 30,
+        "quantity_dispensed": 30,
+        "fill_number": 1,
+        "generic_indicator": "G"
+      },
+      "pharmacy": {
+        "ncpdp_id": "1009981",
+        "name": "Walmart Pharmacy",
+        "location": { "city": "Austin", "state": "TX", "zip": "78701" }
+      },
+      "prescriber": {
+        "npi": "3344556677",
+        "name": "Dr. Chloe Williams",
+        "specialty": "Psychiatry"
+      },
+      "pricing": {
+        "ingredient_cost": 15.00,
+        "dispensing_fee": 2.50,
+        "total_cost": 17.50,
+        "copay": 10.00,
+        "plan_paid": 0.00,
+        "rebate_amount": 0.00
+      },
+      "adjudication": {
+        "processed_on": "2025-02-01T13:02:15Z",
+        "processor_id": "WAL-PROCESSOR-02",
+        "response_code": "09",
+        "reject_reason": "Member Not Covered"
+      },
+      "claim_type": "RETAIL",
+      "plan_details": {
+        "plan_id": "BCBS-TX-HMO",
+        "tier": 1,
+        "formulary_status": "Preferred",
+        "utilization_management": { "pa_required": false, "step_therapy": false, "quantity_limit": false }
+      },
+      "related_pa_id": null,
+      "audit_trail": [
+        { "timestamp": "2025-02-01T13:00:00Z", "actor": "pharmacy_system", "action": "CLAIM_SUBMITTED" },
+        { "timestamp": "2025-02-01T13:02:15Z", "actor": "claims_engine", "action": "CLAIM_REJECTED" }
+      ]
+    }
+  ]
+}

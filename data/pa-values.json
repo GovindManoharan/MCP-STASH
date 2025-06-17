@@ -1,0 +1,303 @@
+{
+  "user_id": "U234567890",
+  "pa_requests": [
+    {
+      "pa_id": "PA20250718015",
+      "requested_on": "2025-07-18T11:00:00Z",
+      "status": "DENIED",
+      "drug": {
+        "name": "Keytruda",
+        "strength": "100mg/4mL",
+        "form": "Injection",
+        "quantity_requested": 1,
+        "days_supply": 21,
+        "ndc": "00006-3026-02"
+      },
+      "prescriber": {
+        "npi": "6677889900",
+        "name": "Dr. Emily White",
+        "specialty": "Oncology",
+        "contact": {
+          "phone": "312-555-0101",
+          "fax": "312-555-0102",
+          "email": "emily.white@nwhospital.org"
+        },
+        "address": {
+          "line1": "251 E Huron St",
+          "line2": "Oncology Dept, Suite 500",
+          "city": "Chicago",
+          "state": "IL",
+          "zip": "60611"
+        }
+      },
+      "pharmacy": {
+        "ncpdp_id": "9876543",
+        "name": "Northwestern Memorial Hospital Pharmacy",
+        "phone": "312-926-2000",
+        "fax": "312-926-2001"
+      },
+      "clinical_info": {
+        "diagnosis_codes": ["C34.90"],
+        "clinical_rationale": "Patient diagnosed with non-small cell lung cancer. Requesting Keytruda as first-line treatment.",
+        "labs": [
+          {
+            "test": "PD-L1",
+            "value": "60",
+            "unit": "%",
+            "date": "2025-07-15"
+          }
+        ],
+        "previous_medications": []
+      },
+      "documents": [
+        {
+          "type": "Pathology Report",
+          "uploaded_by": "prescriber",
+          "uploaded_on": "2025-07-18T11:05:00Z",
+          "url": "https://s3.example.com/docs/PA20250718015_pathology.pdf"
+        }
+      ],
+      "decision": {
+        "made_on": "2025-07-20T13:45:00Z",
+        "by": "medical_director_02",
+        "reason": "Plan/Benefit Exclusion. Keytruda is not covered under this member's current benefit plan."
+      },
+      "audit_trail": [
+        { "timestamp": "2025-07-18T11:00:00Z", "actor": "system", "action": "PA_REQUEST_RECEIVED" },
+        { "timestamp": "2025-07-20T13:45:00Z", "actor": "medical_director_02", "action": "PA_DENIED" }
+      ]
+    }
+  ]
+}
+{
+  "user_id": "U345678901",
+  "pa_requests": [
+    {
+      "pa_id": "PA20250615019",
+      "requested_on": "2025-06-15T10:00:00Z",
+      "status": "APPROVED",
+      "drug": {
+        "name": "Eliquis",
+        "strength": "5mg",
+        "form": "Tablet",
+        "quantity_requested": 60,
+        "days_supply": 30,
+        "ndc": "00003-0893-21"
+      },
+      "prescriber": {
+        "npi": "7788990011",
+        "name": "Dr. David Johnson",
+        "specialty": "Family Medicine",
+        "contact": {
+          "phone": "602-555-0123",
+          "fax": "602-555-0124",
+          "email": "djohnson@phxhealth.net"
+        },
+        "address": {
+          "line1": "456 Health Way",
+          "line2": "Suite 100",
+          "city": "Phoenix",
+          "state": "AZ",
+          "zip": "85004"
+        }
+      },
+      "pharmacy": {
+        "ncpdp_id": "2001123",
+        "name": "Walgreens",
+        "phone": "800-333-4444",
+        "fax": "800-333-4445"
+      },
+      "clinical_info": {
+        "diagnosis_codes": ["I48.91"],
+        "clinical_rationale": "Patient has nonvalvular atrial fibrillation. Eliquis requested for stroke prevention. CHADS-VASc score of 3.",
+        "labs": [],
+        "previous_medications": [
+          {
+            "name": "Aspirin",
+            "start_date": "2022-01-01",
+            "end_date": "2025-06-10",
+            "outcome": "Insufficient for stroke prevention given updated risk score"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "type": "Chart Notes",
+          "uploaded_by": "prescriber",
+          "uploaded_on": "2025-06-15T10:05:00Z",
+          "url": "https://s3.example.com/docs/PA20250615019_notes.pdf"
+        }
+      ],
+      "decision": {
+        "made_on": "2025-06-16T15:20:00Z",
+        "by": "clinical_pharmacist_04",
+        "reason": "Meets criteria for anticoagulation therapy in nonvalvular atrial fibrillation."
+      },
+      "audit_trail": [
+        { "timestamp": "2025-06-15T10:00:00Z", "actor": "fax_intake", "action": "PA_REQUEST_RECEIVED" },
+        { "timestamp": "2025-06-16T15:20:00Z", "actor": "clinical_pharmacist_04", "action": "PA_APPROVED" }
+      ]
+    }
+  ]
+}
+{
+  "user_id": "U456789012",
+  "pa_requests": []
+}
+{
+  "user_id": "U567890123",
+  "pa_requests": [
+    {
+      "pa_id": "PA20250905111",
+      "requested_on": "2025-09-05T14:50:00Z",
+      "status": "PENDING",
+      "drug": {
+        "name": "Wegovy",
+        "strength": "2.4mg/0.75mL",
+        "form": "Injection",
+        "quantity_requested": 1,
+        "days_supply": 28,
+        "ndc": "0169-4240-11"
+      },
+      "prescriber": {
+        "npi": "1011223344",
+        "name": "Dr. Kenji Tanaka",
+        "specialty": "Bariatrics",
+        "contact": {
+          "phone": "303-555-0188",
+          "fax": "303-555-0189",
+          "email": "ktanaka@denverweightloss.com"
+        },
+        "address": {
+          "line1": "789 Mountain View Rd",
+          "line2": "Bariatric Center",
+          "city": "Denver",
+          "state": "CO",
+          "zip": "80204"
+        }
+      },
+      "pharmacy": {
+        "ncpdp_id": "1987654",
+        "name": "CVS Pharmacy",
+        "phone": "800-111-2222",
+        "fax": "800-111-2223"
+      },
+      "clinical_info": {
+        "diagnosis_codes": ["E66.01", "Z68.41"],
+        "clinical_rationale": "Patient with morbid obesity (BMI 41) and has failed multiple diet and exercise programs. Requesting Wegovy for chronic weight management.",
+        "labs": [
+          {
+            "test": "BMI",
+            "value": "41",
+            "unit": "kg/m^2",
+            "date": "2025-09-01"
+          }
+        ],
+        "previous_medications": [
+          {
+            "name": "Phentermine",
+            "start_date": "2024-01-01",
+            "end_date": "2024-07-01",
+            "outcome": "Ineffective, significant side effects"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "type": "Clinical Summary",
+          "uploaded_by": "prescriber",
+          "uploaded_on": "2025-09-05T14:55:00Z",
+          "url": "https://s3.example.com/docs/PA20250905111_summary.pdf"
+        },
+        {
+          "type": "Dietician Notes",
+          "uploaded_by": "prescriber",
+          "uploaded_on": "2025-09-05T14:55:00Z",
+          "url": "https://s3.example.com/docs/PA20250905111_diet.pdf"
+        }
+      ],
+      "decision": {
+        "made_on": null,
+        "by": null,
+        "reason": null
+      },
+      "audit_trail": [
+        { "timestamp": "2025-09-05T14:50:00Z", "actor": "prescriber_portal", "action": "PA_REQUEST_RECEIVED" },
+        { "timestamp": "2025-09-05T14:55:00Z", "actor": "prescriber_portal", "action": "DOCUMENTS_UPLOADED" },
+        { "timestamp": "2025-09-05T15:00:00Z", "actor": "system", "action": "PA_ASSIGNED_TO_REVIEWER" }
+      ]
+    }
+  ]
+}
+{
+  "user_id": "U678901234",
+  "pa_requests": [
+    {
+      "pa_id": "PA20250120045",
+      "requested_on": "2025-01-20T16:00:00Z",
+      "status": "DENIED",
+      "drug": {
+        "name": "Dupixent",
+        "strength": "300mg/2mL",
+        "form": "Injection",
+        "quantity_requested": 2,
+        "days_supply": 28,
+        "ndc": "00024-5914-02"
+      },
+      "prescriber": {
+        "npi": "4545454545",
+        "name": "Dr. Jessica Davis",
+        "specialty": "Dermatology",
+        "contact": {
+          "phone": "512-555-0145",
+          "fax": "512-555-0146",
+          "email": "jdavis@austinderm.com"
+        },
+        "address": {
+          "line1": "123 Skin Health Ave",
+          "line2": "",
+          "city": "Austin",
+          "state": "TX",
+          "zip": "78704"
+        }
+      },
+      "pharmacy": {
+        "ncpdp_id": "5432109",
+        "name": "Accredo Health",
+        "phone": "800-803-2523",
+        "fax": "800-803-2524"
+      },
+      "clinical_info": {
+        "diagnosis_codes": ["L20.9"],
+        "clinical_rationale": "Severe atopic dermatitis. Patient has been unresponsive to high-potency topical corticosteroids.",
+        "labs": [],
+        "previous_medications": [
+          {
+            "name": "Clobetasol Propionate",
+            "start_date": "2024-09-01",
+            "end_date": "2025-01-15",
+            "outcome": "Ineffective"
+          }
+        ]
+      },
+      "documents": [
+        {
+          "type": "Chart Notes",
+          "uploaded_by": "prescriber",
+          "uploaded_on": "2025-01-20T16:05:00Z",
+          "url": "https://s3.example.com/docs/PA20250120045_chartnotes.pdf"
+        }
+      ],
+      "decision": {
+        "made_on": "2025-01-23T10:30:00Z",
+        "by": "clinical_pharmacist_03",
+        "reason": "Denied. Insufficient clinical information to establish failure of topical calcineurin inhibitors (e.g., tacrolimus) as required by step-therapy protocol."
+      },
+      "audit_trail": [
+        { "timestamp": "2025-01-20T16:00:00Z", "actor": "system", "action": "PA_REQUEST_RECEIVED" },
+        { "timestamp": "2025-01-21T09:00:00Z", "actor": "system", "action": "REQUEST_PENDED_FOR_INFO" },
+        { "timestamp": "2025-01-23T10:30:00Z", "actor": "clinical_pharmacist_03", "action": "PA_DENIED" }
+      ]
+    }
+  ]
+}
