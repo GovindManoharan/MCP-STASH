@@ -70,13 +70,6 @@ class State:
 mcp = FastMCP("Finance MCP Server")
 
 
-server_params = StdioServerParameters(
-    command="python",
-    # Make sure to update to the full absolute path to your math_server.py file
-    args=["/Users/gman/Documents/Problem-First/dummy-data/financeMCPServer.py"],
-)
-
-
 
 class FinancialPredictor:
     def __init__(self):
